@@ -4,6 +4,10 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%
 SetBatchLines, -1
 
+DPI := 800
+CS := 0.36
+N := 4000 * (288 / (DPI * CS))
+
 Q::
 SendInput, c
 
@@ -22,9 +26,9 @@ Loop
     if (A_TickCount - start > 250)
         break
 
-    DllCall("mouse_event", "UInt", 0x01, "Int", 4000, "Int", 0)
+    DllCall("mouse_event", "UInt", 0x01, "Int", N, "Int", 0)
     Sleep, 3
 }
 return
 
-Esc::ExitApp
+F3::ExitApp
