@@ -1,6 +1,6 @@
 ; script requires Spencer Macro Utilities! (set keybind for freeze to Middle Mouse Button)
 
-; to use walk against a wall and press the keybind to glitch
+; To use walk against a wall and press the keybind to glitch
 
 #SingleInstance Force
 #NoEnv
@@ -15,11 +15,11 @@ DllCall("Winmm\timeBeginPeriod", "UInt", 1)
 F1::
     SendInput, {Blind}c
 
-    DllCall("Sleep", "UInt", 5)
+    DllCall("Sleep", "UInt", 6)
 
     SendInput, {Blind}{MButton down}
 
-    Sleep, 500
+    Sleep, 750
 
     SendInput, {Blind}{MButton up}
 return
