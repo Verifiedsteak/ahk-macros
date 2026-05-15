@@ -9,6 +9,7 @@ Process Priority,, High
 
 DllCall("Winmm\timeBeginPeriod", "UInt", 1)
 
+; keybind for glitch (default is F1)
 F1::
     SendInput, {Blind}c
 
@@ -21,6 +22,7 @@ F1::
     SendInput, {Blind}{MButton up}
 return
 
+; exit keybind (default is F4)
 F4::
     DllCall("Winmm\timeEndPeriod", "UInt", 1)
     ExitApp
