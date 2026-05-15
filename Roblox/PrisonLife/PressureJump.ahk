@@ -1,4 +1,4 @@
-; to use crouch and put head under a part then press keybind to glitch
+; To use crouch and put head under a part then press keybind to glitch
 
 #SingleInstance Force
 #NoEnv
@@ -26,13 +26,13 @@ X := Round((Spin * BaseDPI * BaseCS) / (DPI * CS))
 Q::
 SendInput, c
 
-DllCall("Sleep", "UInt", 12)
+DllCall("Sleep", "UInt", 6)
 
 SendInput, {Space down}
 DllCall("Sleep", "UInt", 50)
 SendInput, {Space up}
 
-DllCall("Sleep", "UInt", 10)
+DllCall("Sleep", "UInt", 4)
 
 start := A_TickCount
 
@@ -43,7 +43,7 @@ Loop
 
     DllCall("mouse_event", "UInt", 0x0001, "Int", X, "Int", 0, "UInt", 0, "UPtr", 0)
 
-    DllCall("Sleep", "UInt", 3)
+    DllCall("Sleep", "UInt", 4)
 }
 return
 
