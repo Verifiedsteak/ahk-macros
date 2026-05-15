@@ -10,7 +10,7 @@ Process Priority,, High
 DllCall("Winmm\timeBeginPeriod", "UInt", 1)
 
 ; this is for the spin, ONLY CHANGE IT IF ITS TOO SLOW OR FAST!
-Spin := 3000
+Spin := 4000
 
 ; do not change this, this is for the base which the spin was orginally set for
 BaseDPI := 800
@@ -43,7 +43,7 @@ Loop
 
     DllCall("mouse_event", "UInt", 0x0001, "Int", X, "Int", 0, "UInt", 0, "UPtr", 0)
 
-    DllCall("Sleep", "UInt", 1)
+    DllCall("Sleep", "UInt", 3)
 }
 return
 
