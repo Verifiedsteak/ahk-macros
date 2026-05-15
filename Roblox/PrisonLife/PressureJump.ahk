@@ -1,4 +1,4 @@
-; To use crouch and put head under a part then press keybind to glitch
+; to use crouch and put head under a part then press keybind to glitch
 
 #SingleInstance Force
 #NoEnv
