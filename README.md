@@ -1,8 +1,90 @@
-# AHK Scripts
+# AutoHotkey Scripts
 
-## WARNING : I accidentally deleted this ENTIRE file so and I don't have time to currently write all the usage instructions so this will be quick.
+Collection of AutoHotkey macros/scripts for various games and utilities.
 
-This will be updated in a later version I am just too lazy to do it right now.
+## Current Scripts
 
-### If you wanna know how to use each script look in the first line and you should see a comment explaining instructions.
-### This requires AutoHotKey v1 and Spencer Macro Utilities (Clip)
+### Roblox / Prison Life
+
+#### PressureJump
+
+Automates the "Pressure Jump" movement glitch in Roblox Prison Life.
+
+How it works:
+1. Crawl under an object so your head is partially blocked.
+2. Press the activation keybind.
+3. The script crouches, jumps, and rapidly spins to generate upward velocity/fling.
+
+This can be done manually, but the macro provides more consistent timing.
+
+##### Default Keybinds
+- `Q` — Activate script
+- `F3` — Exit script
+
+##### Recommended Settings
+Currently tuned for:
+- `800 DPI`
+- `0.36` Roblox camera sensitivity
+- `240+ FPS` recommended
+
+These values can be changed inside `PressureJump.ahk`.
+
+##### FPS Notes
+- Tested at:
+  - `60 FPS`
+  - `240 FPS`
+- Works significantly better at higher FPS.
+- FPS values between 60 and 240 have not been thoroughly tested.
+
+---
+
+#### Clip
+
+Automates a wall clip glitch in Roblox Prison Life.
+
+How it works:
+1. Crouch against a wall.
+2. Press the activation keybind.
+3. The script times the uncrouch/freeze sequence so your head partially enters the wall collision, allowing clipping.
+
+##### Requirements
+- Spencer Macro Utilities
+- Freeze keybind set to `Middle Mouse Button`
+- `240+ FPS` recommended
+
+##### Default Keybinds
+- `F1` — Activate script
+- `F4` — Exit script
+
+##### FPS Notes
+- Tested at:
+  - `60 FPS`
+  - `240 FPS`
+- Works significantly better at higher FPS.
+- FPS values between 60 and 240 have not been thoroughly tested.
+
+---
+
+## Requirements
+
+### General
+- AutoHotkey v1
+
+### Additional Requirements
+- Spencer Macro Utilities (required for `Clip`)
+
+---
+
+## Releases
+
+Current release:
+- `v1.0.0-alpha` (pre-release)
+
+Release files currently include compiled executables only.
+
+---
+
+## Notes
+
+- Scripts may require timing adjustments depending on FPS, DPI, sensitivity, or Roblox updates.
+- More scripts/macros for other games may be added in future releases.
