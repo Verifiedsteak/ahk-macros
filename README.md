@@ -1,4 +1,4 @@
-# AutoHotkey Scripts
+# AutoHotkey Macros
 
 Collection of AutoHotkey macros/scripts for various games and utilities.
 
