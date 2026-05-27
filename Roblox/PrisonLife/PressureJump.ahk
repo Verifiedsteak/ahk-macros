@@ -24,30 +24,30 @@ X := Round((Spin * BaseDPI * BaseCS) / (DPI * CS))
 
 ; keybind for glitch (default is Q)
 Q::
-SendInput, c
+    SendInput, c
 
-DllCall("Sleep", "UInt", 6)
+    DllCall("Sleep", "UInt", 6)
 
-SendInput, {Space down}
-DllCall("Sleep", "UInt", 50)
-SendInput, {Space up}
-
-DllCall("Sleep", "UInt", 4)
-
-start := A_TickCount
-
-Loop
-{
-    if (A_TickCount - start > 200)
-        break
-
-    DllCall("mouse_event", "UInt", 0x0001, "Int", X, "Int", 0, "UInt", 0, "UPtr", 0)
+    SendInput, {Space down}
+    DllCall("Sleep", "UInt", 50)
+    SendInput, {Space up}
 
     DllCall("Sleep", "UInt", 4)
-}
+
+    start := A_TickCount
+
+    Loop
+    {
+        if (A_TickCount - start > 200)
+            break
+
+        DllCall("mouse_event", "UInt", 0x0001, "Int", X, "Int", 0, "UInt", 0, "UPtr", 0)
+
+        DllCall("Sleep", "UInt", 4)
+    }
 return
 
 ; exit keybind (default is F3)
 F3::
-DllCall("Winmm\timeEndPeriod", "UInt", 1)
+    DllCall("Winmm\timeEndPeriod", "UInt", 1)
 ExitApp
