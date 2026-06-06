@@ -13,7 +13,7 @@ DllCall("Winmm\timeBeginPeriod", "UInt", 1)
 Spin := 625*2 ; 180 spin
 
 ; EXPERIMENTAL
-FREEZE := True ; freeze keybind is middle mouse button
+FREEZE := False ; freeze keybind is middle mouse button
 
 ; dont change this!
 Spins := 20
@@ -21,8 +21,6 @@ Spins := 20
 ; keybind for glitch (default is Q)
 Q::
     SendInput, c
-
-    DllCall("Sleep", "UInt", 10)
 
     SendInput, {Space down}
     if (FREEZE)
@@ -42,7 +40,7 @@ Q::
         DllCall("mouse_event", "UInt", 0x0040, "UInt", 0, "UInt", 0, "UInt", 0, "UPtr", 0)
     }
 
-    DllCall("Sleep", "UInt", 4)
+    DllCall("Sleep", "UInt", 14)
 
     Loop, %Spins%
     {
