@@ -82,6 +82,8 @@ Current release:
 
 Release files currently include compiled executables only.
 
+Also outdated because I'm way too lazy to compile rn
+
 ---
 
 ## Notes
