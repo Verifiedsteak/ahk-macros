@@ -13,7 +13,7 @@ DllCall("Winmm\timeBeginPeriod", "UInt", 1)
 Spin := 25000
 
 ; do not change this, this is for the base which the spin was orginally set for
-BaseDPI := 800
+BaseDPI := 1600
 BaseCS := 0.36
 
 ; settings for prefrence (change to your setup)
